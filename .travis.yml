@@ -37,8 +37,8 @@ before_script:
 jobs:
   include:
     - stage: client
-      script: ./gradlew app:ktlintFormat
-      script: ./gradlew app:lint
+      script: ./gradlew application:ktlintFormat
+      script: ./gradlew application:lint
 script:
   - bundle exec danger
 after_success:
