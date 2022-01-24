@@ -7,4 +7,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "mao_trailer_android"
-include ':app'
+include ':application'
