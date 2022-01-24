@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mao Trailer</string>
+
+    <string name="title_movie">Movies</string>
+    <string name="title_tv">Tv</string>
+    <string name="title_profile">Profile</string>
+
+</resources>
