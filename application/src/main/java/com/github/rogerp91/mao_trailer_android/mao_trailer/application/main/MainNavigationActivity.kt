@@ -1,28 +1,29 @@
-package com.github.rogerp91.mao_trailer_android.mao_trailer.application
+package com.github.rogerp91.mao_trailer_android.mao_trailer.application.main
 
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
-import com.github.rogerp91.mao_trailer_android.mao_trailer.application.databinding.ActivityMainBinding
+import com.github.rogerp91.mao_trailer_android.mao_trailer.application.R
+import com.github.rogerp91.mao_trailer_android.mao_trailer.application.databinding.AppActivityMainNavigationBinding
 import com.github.rogerp91.mao_trailer_android.mao_trailer.application.navigation.BottomNavigationPositionHandler
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 
-class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
+class MainNavigationActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: AppActivityMainNavigationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = AppActivityMainNavigationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val navView: BottomNavigationView = binding.navView
 
         navView.apply {
             menu.getItem(0).isChecked = true
-            setOnItemSelectedListener(this@MainActivity)
+            setOnItemSelectedListener(this@MainNavigationActivity)
         }
         findNavigationPositionById(R.id.navigation_movie)
     }

@@ -25,6 +25,7 @@ android {
         consumerProguardFiles "consumer-rules.pro"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -47,14 +48,13 @@ android {
         jvmTarget = "11"
     }
 
+    resourcePrefix "app_"
+
     buildFeatures {
-        viewBinding true
+        dataBinding = true
+        viewBinding = true
     }
 
-    dataBinding {
-        enabled true
-    }
-    
     testOptions {
         unitTests.all {
             jacoco {
