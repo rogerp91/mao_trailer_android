@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.github.rogerp91.mao_trailer_android.mao_trailer.application.R
 import com.github.rogerp91.mao_trailer_android.mao_trailer.application.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
@@ -32,9 +31,12 @@ class DashboardFragment : Fragment() {
         val root: View = binding.root
 
         val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        dashboardViewModel.text.observe(
+            viewLifecycleOwner,
+            Observer {
+                textView.text = it
+            }
+        )
         return root
     }
 

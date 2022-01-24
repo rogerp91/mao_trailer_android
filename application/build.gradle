@@ -50,6 +50,11 @@ android {
     buildFeatures {
         viewBinding true
     }
+
+    dataBinding {
+        enabled true
+    }
+    
     testOptions {
         unitTests.all {
             jacoco {
