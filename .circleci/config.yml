@@ -27,11 +27,12 @@ jobs:
   danger:
     working_directory: ~/code
     docker:
-      - image: jkkitakita/circleci-danger
+      - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: cp -f ~/danger/Dangerfile .
-      - run: bundle exec danger --fail-on-errors=true
+      - run:
+          name: Run danger
+          command: bundle exec danger
 workflows:
   build:
     jobs:
