@@ -24,6 +24,7 @@
         <entry key="application/src/main/res/layout/activity_main.xml" value="0.3541666666666667" />
         <entry key="application/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="application/src/main/res/layout/app_activity_main.xml" value="0.2324561403508772" />
+        <entry key="application/src/main/res/layout/app_activity_main_navigation.xml" value="0.22017543859649122" />
         <entry key="application/src/main/res/layout/app_activity_splash.xml" value="0.2324561403508772" />
         <entry key="application/src/main/res/layout/application_activity_main.xml" value="0.3140350877192982" />
         <entry key="application/src/main/res/layout/application_activity_splash.xml" value="0.3140350877192982" />
@@ -38,6 +39,7 @@
         <entry key="application/src/main/res/menu/bottom_nav_menu.xml" value="0.37395833333333334" />
         <entry key="application/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.39010416666666664" />
         <entry key="application/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.39010416666666664" />
+        <entry key="feature-movies/src/main/res/layout/movies_header_section.xml" value="0.3017543859649123" />
       </map>
     </option>
   </component>
