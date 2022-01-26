@@ -24,17 +24,7 @@ jobs:
       - run:
           name: Run lint
           command: ./gradlew lint
-  danger:
-    working_directory: ~/code
-    docker:
-      - image: circleci/ruby:2.4.1
-    steps:
-      - checkout
-      - run:
-          name: Run danger
-          command: bundle exec danger
 workflows:
   build:
     jobs:
       - build
-      - danger
