@@ -22,3 +22,8 @@ buildscript {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+wrapper {
+    gradleVersion = gradleBuildToolsVersion
+    distributionType = Wrapper.DistributionType.BIN
+}
