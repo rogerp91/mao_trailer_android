@@ -19,12 +19,15 @@ jobs:
             - ~/.m2
           key: jars-{{ checksum "gradle/wrapper/gradle-wrapper.properties" }}-{{ checksum "build.gradle" }}-{{ checksum  "application/build.gradle" }}-{{ checksum  "core_network/build.gradle" }}-{{ checksum  "feature-movies/build.gradle" }}
       - run:
-          name: Run Tests
+          name: Run ktlint
           command: ./gradlew ktlintFormat
       - run:
-          name: Run Tests
+          name: Run lint
           command: ./gradlew lint
+      - run:
+          name: Run danger
+          command: bundle exec danger --verbose
 workflows:
   build:
     jobs:
-      - build
+      - build 508ee4a49f1af7efa37d095f13736c72a04504cb
