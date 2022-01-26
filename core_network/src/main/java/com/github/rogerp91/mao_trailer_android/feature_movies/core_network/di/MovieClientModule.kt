@@ -1,8 +1,8 @@
 package com.github.rogerp91.mao_trailer_android.feature_movies.core_network.di
 
 import com.github.rogerp91.mao_trailer_android.feature_movies.core_network.services.movie.MoviesService
-import com.github.rogerp91.wombatmovierestclient.client.services.movie.discover.DiscoverClient
-import com.github.rogerp91.wombatmovierestclient.client.services.movie.discover.DiscoverClientDefault
+import com.github.rogerp91.mao_trailer_android.feature_movies.core_network.services.movie.discover.DiscoverClient
+import com.github.rogerp91.mao_trailer_android.feature_movies.core_network.services.movie.discover.DiscoverClientDefault
 import com.github.rogerp91.mao_trailer_android.feature_movies.core_network.services.movie.id.MoviesForIdClient
 import com.github.rogerp91.mao_trailer_android.feature_movies.core_network.services.movie.id.MoviesForIdClientDefault
 import com.github.rogerp91.mao_trailer_android.feature_movies.core_network.services.movie.multiple.DiscoverPopularTopClient

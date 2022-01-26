@@ -1,6 +1,6 @@
-package com.github.rogerp91.wombatmovierestclient.client.services.movie.discover
+package com.github.rogerp91.mao_trailer_android.feature_movies.core_network.services.movie.discover
 
-import com.github.rogerp91.wombatmovierestclient.client.model.MovieDTO
+import com.github.rogerp91.mao_trailer_android.feature_movies.core_network.model.MovieDTO
 import com.github.rogerp91.mao_trailer_android.feature_movies.core_network.services.movie.MoviesService
 import com.github.rogerp91.mao_trailer_android.feature_movies.core_network.services.utils.BaseClient
 import com.github.rogerp91.mao_trailer_android.feature_movies.core_network.services.utils.NetworkResult

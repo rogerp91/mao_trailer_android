@@ -66,6 +66,7 @@ android {
 }
 
 dependencies {
+    implementation project(path: ':feature-movies')
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
@@ -80,7 +81,6 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesAndroidVersion"
 
     implementation "com.google.dagger:hilt-android:$daggerHiltVersion"
-    implementation project(path: ':feature-movies')
     kapt "com.google.dagger:hilt-android-compiler:$daggerHiltVersion"
     kapt "androidx.hilt:hilt-compiler:$hiltCompilerVersion"
 

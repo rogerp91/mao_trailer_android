@@ -53,6 +53,9 @@ android {
         }
         unitTests.returnDefaultValues = true
     }
+    lintOptions {
+        xmlReport true
+    }
 }
 
 dependencies {
