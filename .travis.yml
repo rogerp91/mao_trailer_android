@@ -36,6 +36,10 @@ before_script:
   - chmod +x gradlew
 jobs:
   include:
+    - stage: application
+      script: ./gradlew application:ktlintFormat
+      script: ./gradlew application:lint
+      script: ./gradlew application:test
     - stage: core_network
       script: ./gradlew core_network:ktlintFormat
       script: ./gradlew core_network:lint
