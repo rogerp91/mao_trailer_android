@@ -24,9 +24,6 @@ jobs:
       - run:
           name: Run lint
           command: ./gradlew lint
-      - run:
-          name: Run danger
-          command: bundle exec danger --verbose
   check:
     working_directory: ~/code
     docker:
