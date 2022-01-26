@@ -1,26 +1,30 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
-
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
+orbs:
+  android: circleci/android@2.0.0
 jobs:
-  say-hello:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
+  build:
+    working_directory: ~/code
     docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+      - image: circleci/android:api-30
     steps:
       - checkout
+      - restore_cache:
+          key: jars-{{ checksum "gradle/wrapper/gradle-wrapper.properties" }}-{{ checksum "build.gradle" }}-{{ checksum  "application/build.gradle" }}-{{ checksum  "core_network/build.gradle" }}-{{ checksum  "feature-movies/build.gradle" }}
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
-
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+          name: Download Dependencies
+          command: ./gradlew androidDependencies
+      - save_cache:
+          paths:
+            - ~/.gradle
+            - ~/.m2
+          key: jars-{{ checksum "gradle/wrapper/gradle-wrapper.properties" }}-{{ checksum "build.gradle" }}-{{ checksum  "application/build.gradle" }}-{{ checksum  "core_network/build.gradle" }}-{{ checksum  "feature-movies/build.gradle" }}
+      - run:
+          name: Run ktlint
+          command: ./gradlew ktlintFormat
+      - run:
+          name: Run lint
+          command: ./gradlew lint
 workflows:
-  say-hello-workflow:
+  build:
     jobs:
-      - say-hello
+      - build

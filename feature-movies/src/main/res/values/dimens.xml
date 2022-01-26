@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="movies_title_margin_start">16dp</dimen>
+    <dimen name="movies_title_margin_top">16dp</dimen>
+    <dimen name="movies_title_ic_search_top">18dp</dimen>
+    <dimen name="movies_title_ic_search_margin_end">16dp</dimen>
+    <dimen name="movies_title_text_size">24sp</dimen>
+</resources>
