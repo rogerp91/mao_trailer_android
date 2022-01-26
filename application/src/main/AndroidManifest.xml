@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/app_Theme.NoActionBar.MaoTrailer">
         <activity
-            android:name=".splash.SplashActivity"
+            android:name=".splash.SplashScreenActivity"
             android:exported="true"
             android:theme="@style/app_Theme.NoActionBar.MaoTrailer.SplashTheme">
             <intent-filter>
