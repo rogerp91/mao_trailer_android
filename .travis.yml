@@ -1,6 +1,7 @@
 language: android
 dist: trusty
 jdk: oraclejdk11
+sudo: required
 env:
   global:
     - ANDROID_TARGET=android-29
@@ -49,6 +50,7 @@ jobs:
       script: ./gradlew feature-movies:lint
       script: ./gradlew feature-movies:test
 script:
+  - ./gradlew clean build
   - ./gradlew build --scan -s
   - bundle exec danger
 after_success:
