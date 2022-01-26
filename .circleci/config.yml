@@ -24,39 +24,16 @@ jobs:
       - run:
           name: Run lint
           command: ./gradlew lint
-  check:
+  danger:
     working_directory: ~/code
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: jkkitakita/circleci-danger
     steps:
-      - attach_workspace:
-          at: ~/code
-      - restore_cache:
-          key: saddler-gems-{{ checksum "Gemfile.lock" }}
-      - run: bundle install --path vendor/bundle
-      - run:
-          name: Run danger
-          command: bundle exec danger
-      - run:
-          name: Move artifacts
-          command: |
-            ARTIFACTS="/tmp/circle_artifacts"
-            mkdir -p "$ARTIFACTS"
-            cp -v "app/build/reports/checkstyle/checkstyle.xml" "$ARTIFACTS/"
-            cp -v "app/build/reports/findbugs/findbugs.xml" "$ARTIFACTS/"
-            cp -v "app/build/reports/pmd/pmd.xml" "$ARTIFACTS/"
-            cp -v "app/build/reports/pmd/cpd.xml" "$ARTIFACTS/"
-            cp -v "app/build/reports/lint-results.xml" "$ARTIFACTS/"
-      - save_cache:
-          paths:
-            - vendor/bundle
-          key: saddler-gems-{{ checksum "Gemfile.lock" }}
-      - store_artifacts:
-          path: "/tmp/circle_artifacts"
+      - checkout
+      - run: cp -f ~/danger/Dangerfile .
+      - run: bundle exec danger --fail-on-errors=true
 workflows:
   build:
     jobs:
       - build
-      - check:
-          requires:
-            - build
+      - danger
