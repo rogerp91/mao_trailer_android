@@ -39,12 +39,15 @@ jobs:
     - stage: client
       script: ./gradlew application:ktlintFormat
       script: ./gradlew application:lint
+      script: ./gradlew application:test
     - stage: core_network
       script: ./gradlew core_network:ktlintFormat
       script: ./gradlew core_network:lint
+      script: ./gradlew core_network:test
     - stage: feature-movies
       script: ./gradlew feature-movies:ktlintFormat
       script: ./gradlew feature-movies:lint
+      script: ./gradlew feature-movies:test
 script:
   - bundle exec danger
 after_success:
