@@ -1,8 +1,8 @@
 package com.github.rogerp91.mao_trailer_android.mao_trailer.application.navigation
 
 import androidx.fragment.app.Fragment
+import com.github.rogerp91.mao_trailer_android.feature_movies.ui.MoviesFragment
 import com.github.rogerp91.mao_trailer_android.mao_trailer.application.R
-import com.github.rogerp91.mao_trailer_android.mao_trailer.application.ui.dashboard.DashboardFragment
 import com.github.rogerp91.mao_trailer_android.mao_trailer.application.ui.home.HomeFragment
 import com.github.rogerp91.mao_trailer_android.mao_trailer.application.ui.notifications.NotificationsFragment
 
@@ -38,7 +38,7 @@ class MoviesBottomNavigationPosition(
 
     override fun tag(): String = "movies"
 
-    override fun fragment(): Fragment = DashboardFragment()
+    override fun fragment(): Fragment = MoviesFragment()
 
     override fun find(id: Int): BottomNavigationPosition? {
         if (id == R.id.navigation_movie) {

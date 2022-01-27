@@ -39,7 +39,21 @@
         <entry key="application/src/main/res/menu/bottom_nav_menu.xml" value="0.37395833333333334" />
         <entry key="application/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.39010416666666664" />
         <entry key="application/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.39010416666666664" />
+        <entry key="feature-movies/src/main/res/drawable/movies_shadow_image.xml" value="0.37447916666666664" />
+        <entry key="feature-movies/src/main/res/layout/movies_backdrop_list_section.xml" value="0.35833333333333334" />
         <entry key="feature-movies/src/main/res/layout/movies_header_section.xml" value="0.3017543859649123" />
+        <entry key="feature-movies/src/main/res/layout/movies_item_backdrop.xml" value="0.35833333333333334" />
+        <entry key="feature-movies/src/main/res/layout/movies_item_horizontal_section.xml" value="0.35833333333333334" />
+        <entry key="feature-movies/src/main/res/layout/movies_item_list_header_section.xml" value="0.35833333333333334" />
+        <entry key="feature-movies/src/main/res/layout/movies_item_list_section.xml" value="0.35833333333333334" />
+        <entry key="feature-movies/src/main/res/layout/movies_item_list_vertical_section.xml" value="0.35833333333333334" />
+        <entry key="feature-movies/src/main/res/layout/movies_item_poster.xml" value="0.35833333333333334" />
+        <entry key="feature-movies/src/main/res/layout/movies_item_vertical_section.xml" value="0.35833333333333334" />
+        <entry key="feature-movies/src/main/res/layout/movies_list_header_section.xml" value="0.31491228070175437" />
+        <entry key="feature-movies/src/main/res/layout/movies_list_section.xml" value="0.35833333333333334" />
+        <entry key="feature-movies/src/main/res/layout/movies_main_list_header_section.xml" value="0.35833333333333334" />
+        <entry key="feature-movies/src/main/res/layout/movies_movies_fragment.xml" value="0.31491228070175437" />
+        <entry key="feature-movies/src/main/res/layout/movies_poster_list_section.xml" value="0.35833333333333334" />
       </map>
     </option>
   </component>

@@ -9,3 +9,5 @@ rootProject.name = "mao_trailer_android"
 include ':application'
 include ':feature-movies'
 include ':core_network'
+include ':core_common'
+include ':core_ui'
